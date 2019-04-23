@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.css">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./scripts.js"></script>
+        <title>Unique RNG</title>
+    </head>
+    <body>
+        <h2 class="center">Unique Pseudorandom Number Generator</h2>
+        <div>
+            Lower End of Range:
+            <input type="number" id="low-end" placeholder="Low End" value=1>
+            <br>
+            Upper End of Range:
+            <input type="number" id="high-end" placeholder="High End">
+            <br>
+            <button onclick="gen_number()">Generate a Number</button>
+        </div>
+        <br>
+        <div>
+            <h2 class="center" id="main-alert"></h2>
+        </div>
+        <br>
+        <div>
+            <h3>Generated History:</h3>
+            Note: The numbers below here will not be allowed to appear in the
+            generator again until you either reset or reload the page.
+            <div id="roll-history" class="slightly-larger-text"></div>
+        </div>
+    </body>
+</html>
