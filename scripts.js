@@ -63,7 +63,7 @@ const confirm_input = (low_end, high_end) => {
 
 
     // Ensure that high > low
-    if (high_end <= low_end) {
+    if (high_end - 1 <= low_end) {
         if (errored) {response += "<br>"}
         response += "ALERT: High end cannot be less than or equal to low end."
         errored = true
@@ -87,7 +87,7 @@ const confirm_input = (low_end, high_end) => {
 
 
     // Ensure high is a positive integer
-    if (high_end < 0) {
+    if (high_end - 1 < 0) {
         if (errored) {response += "<br>"}
         response += "ALERT: Higher end of range cannot be less than 0."
         errored = true
