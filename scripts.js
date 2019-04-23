@@ -57,7 +57,6 @@ const confirm_input = (low_end, high_end) => {
 
     // Ensure that we aren't trying to generate more numbers than allowed
     if (used_numbers.length == (high_end - low_end)) {
-        console.log(used_numbers)
         response += "ALERT: Cannot generate a new number, all numbers have been used."
         errored = true
     }
@@ -114,5 +113,6 @@ const reset_generator = () => {
     // Resets the page so that you don't always need to reload to reset the generator
     document.getElementById("roll-history").innerHTML = ""
     document.getElementById("main-alert").innerHTML = ""
+    used_numbers = []
     first_gen = true
 };
