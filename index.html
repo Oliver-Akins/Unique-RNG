@@ -37,5 +37,21 @@
         <div class="center">
             Source is auditable <a href="https://github.com/Tyler-A/Unique-RNG" target="_blank">here</a>.
         </div>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const query_min = urlParams.get("min");
+            const query_max = urlParams.get("max");
+
+            // Check if the `min` query string exists
+            if (query_min !== null) {
+                document.getElementById("low-end").value = parseInt(query_min)
+            };
+
+            // Check if the `max` query string exists
+            if (query_max !== null) {
+                document.getElementById("high-end").value = parseInt(query_max)
+            };
+        </script>
     </body>
 </html>
